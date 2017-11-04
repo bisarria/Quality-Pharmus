@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QualityPharmus.Mobile.View.Login" BackgroundColor="Beige"
+             Title="{Binding Title}">
+    <ContentPage.Content>
+        <!--
+        <StackLayout Padding="20">
+            <Image Margin="20" Source="logo.png" Aspect="AspectFit"></Image>
+
+            <Entry Placeholder="E-mail de acesso" Text="{Binding Email}"></Entry>
+            <Entry Placeholder="E-mail de acesso" Text="{Binding Senha}"></Entry>
+            
+            <Button Command="{Binding Login}" Text="Conectar" Style="{StaticResource PrimaryDarkButton}"></Button>
+        </StackLayout>
+        -->
+        <Grid>
+            <Grid Padding="20" VerticalOptions="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Image Margin="20" Source="logo.png" Aspect="AspectFit" Grid.Row="0"></Image>
+
+                <Entry Placeholder="E-mail de acesso" Text="{Binding Email}" Grid.Row="1"></Entry>
+                <Entry Placeholder="Senha de acesso" Text="{Binding Senha}" IsPassword="True" Grid.Row="2"></Entry>
+
+                <Button Style="{StaticResource PrimaryDarkButton}" Text="Entrar" Grid.Row="3" Margin="20,0,20,0" />
+
+                <StackLayout HorizontalOptions="Center"  Orientation="Horizontal" Grid.Row="4"  Margin="0,20,0,10">
+                    <Label Text="Cadastre-se" FontSize="Medium" VerticalOptions="End" HorizontalOptions="Center" >
+                        
+                    </Label>
+                    <Label Text=" | " />
+                    <Label Text="Esqueceu a senha?" TextColor="{StaticResource DarkGray}" HorizontalOptions="Center" FontSize="Medium">
+                        
+                    </Label>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Center"  Orientation="Horizontal" Grid.Row="5"  Margin="0,20,0,10">
+                    <Image Source="facebook2.png" Margin="16,8,16,8"  >
+                    </Image>
+                    <Image Source="google2.png" Margin="16,8,16,8" >
+                    </Image>
+                    <Image Source="tweeter2.png" Margin="16,8,16,8"  >
+                    </Image>
+                </StackLayout>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
